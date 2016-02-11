@@ -17,7 +17,7 @@
 	      'minWidth'  : '860',
 	      'minHeight' : '340',
 	      'thumbWidth': '192',
-	      'thumbView' : '5',
+	      'thumbCount' : '5',
 	      'thumbpath' : './images/',
 	      'slideSpeed': '500',
 	      'delayTime' : '4000',
@@ -143,7 +143,7 @@
 				pnLast = pagination.children('a:nth-child('+(baseListCount+baseListCount)+')'),
 				pnCount = baseListCount,
 				pnPage = 1;
-				pagination.css({left:(-(baseListCount*settings.thumbWidth- Math.floor( settings.thumbView/2 )*settings.thumbWidth))});
+				pagination.css({left:(-(baseListCount*settings.thumbWidth- Math.floor( settings.thumbCount/2 )*settings.thumbWidth))});
 				pagination.css('width',((baseListCount*settings.thumbWidth*3)));
 		
 				if(ua.search(/iPhone/) != -1 || ua.search(/iPad/) != -1 || ua.search(/iPod/) != -1 || ua.search(/Android/) != -1){
@@ -177,12 +177,12 @@
 					$('.pagination a').stop().animate({opacity:(settings.pnOpacity)},300);
 					if(baseListCount >= setNum+1){
 						pagination.css({left:(pagination.position().left-baseListCount*settings.thumbWidth)});
-						pagination.stop().animate({'left':(-((setNum+baseListCount)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+						pagination.stop().animate({'left':(-((setNum+baseListCount)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 					} else if(baseListCount < setNum+1 && baseListCount*2 >= setNum+1){
-						pagination.stop().animate({'left':(-(setNum*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+						pagination.stop().animate({'left':(-(setNum*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 					} else {
 						pagination.css({left:(pagination.position().left+baseListCount*settings.thumbWidth)});
-						pagination.stop().animate({'left':(-((setNum-baseListCount)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+						pagination.stop().animate({'left':(-((setNum-baseListCount)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 					}
 		
 					pnPoint.removeClass('active');
@@ -223,11 +223,11 @@
 							if(pnCount+baseListCount == listCount){
 								pnPointActive.removeClass('active');
 								pnFirst.addClass('active');
-								pagination.css({left:(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbView/2 )))});
-								pagination.stop().animate({'left':(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+								pagination.css({left:(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbCount/2 )))});
+								pagination.stop().animate({'left':(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 							} else {
 								pnPointActive.removeClass('active').next().addClass('active');
-								pagination.stop().animate({'left':(-(listCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+								pagination.stop().animate({'left':(-(listCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 							}
 						});
 						activePos();
@@ -261,11 +261,11 @@
 							if(baseListCount+1 == listCount){
 								pnPointActive.removeClass('active');
 								pnLast.addClass('active');
-								pagination.css({left:(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))});
-								pagination.stop().animate({'left':(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbView/2 )))},300);
+								pagination.css({left:(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))});
+								pagination.stop().animate({'left':(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbCount/2 )))},300);
 							} else {
 								pnPointActive.removeClass('active').prev().addClass('active');
-								pagination.stop().animate({'left':(-((listCount-2)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+								pagination.stop().animate({'left':(-((listCount-2)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 							}
 						});
 						activePos();
@@ -338,11 +338,11 @@
 									if(pnCount+baseListCount == listCount){
 										pnPointActive.removeClass('active');
 										pnFirst.addClass('active');
-										pagination.css({left:(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbView/2 )))});
-										pagination.stop().animate({'left':(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+										pagination.css({left:(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbCount/2 )))});
+										pagination.stop().animate({'left':(-(baseListCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 									} else {
 										pnPointActive.removeClass('active').next().addClass('active');
-										pagination.stop().animate({'left':(-(listCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+										pagination.stop().animate({'left':(-(listCount*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 									}
 								});
 								activePos();
@@ -363,11 +363,11 @@
 									if(baseListCount+1 == listCount){
 										pnPointActive.removeClass('active');
 										pnLast.addClass('active');
-										pagination.css({left:(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))});
-										pagination.stop().animate({'left':(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbView/2 )))},300);
+										pagination.css({left:(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))});
+										pagination.stop().animate({'left':(-(baseListCount*2*settings.thumbWidth-settings.thumbWidth* Math.ceil( settings.thumbCount/2 )))},300);
 									} else {
 										pnPointActive.removeClass('active').prev().addClass('active');
-										pagination.stop().animate({'left':(-((listCount-2)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbView/2 )))},300);
+										pagination.stop().animate({'left':(-((listCount-2)*settings.thumbWidth-settings.thumbWidth* Math.floor( settings.thumbCount/2 )))},300);
 									}
 								});
 								activePos();

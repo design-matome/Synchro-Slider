@@ -13,7 +13,7 @@ $('.synchro_slider').SynchroSlider({
   'minWidth'  : '860',
   'minHeight' : '340',
   'thumbWidth': '192',
-  'thumbView' : '5',
+  'thumbCount' : '5',
   'thumbpath' : './images/',
   'slideSpeed': '500',
   'delayTime' : '4000',
