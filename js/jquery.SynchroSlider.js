@@ -19,12 +19,12 @@
 	      'thumbWidth': '192',
 	      'thumbCount': '5',
 	      'thumbPath' : './images/',
+	      'thumbOpacity' : '0.7',
 	      'slideSpeed': '800',
 	      'delayTime' : '4000',
 	      'easing'    : 'easeInOutQuad',
 	      'autoPlay'  : '1',
-	      'flickMove' : '1',
-	      'pnOpacity' : '0.7'
+	      'flickMove' : '1'
 	    }, options);
 
 		return this.each(function() {	
@@ -149,7 +149,7 @@
 					pnPoint.css({opacity:'1'});
 				} else {
 					pnPoint.css({opacity:'1'}).hover(function(){
-						$(this).stop().animate({opacity:(settings.pnOpacity)},1);
+						$(this).stop().animate({opacity:(settings.thumbOpacity)},1);
 					}, function(){
 						$(this).stop().animate({opacity:'1'});
 					});
