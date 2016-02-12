@@ -24,6 +24,10 @@ $('.synchro_slider').SynchroSlider({
 });
 ```
 
+## Options and Settings
+
+http://design-matome.com/archives/488
+
 ## Example
 
 http://design-matome.com/SynchroSlider/
